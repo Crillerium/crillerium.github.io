@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crillerium Blog </title>
+    <title>Crillerium Blog</title>
     <meta name="author" content="Crillerium">
     <meta name="description" content="Share Knowledge and Inspiration ">
     <meta name="keywords" content=" ">
@@ -72,6 +72,13 @@
             <span>archives</span>
         </a>
         
+        <a href="/atom.xml">
+            <span>
+                <a-icon type="file" theme="filled" />
+            </span>
+            <span>feed</span>
+        </a>
+        
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -107,6 +114,15 @@
                         <a-icon type="folder" theme="filled" />
                     </div>
                     <div style="min-width:100px;max-width: 150%;width: 20%;">archives</div>
+                </div>
+            </a>
+            
+            <a href="/atom.xml">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="file" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">feed</div>
                 </div>
             </a>
             
@@ -169,7 +185,7 @@
                         
                         <span class="tag">
                             
-                            <a href="/tags/linux" style=color:#00a596>
+                            <a href="/tags/linux" style=color:#ffa2c4>
                                 linux
                             </a>
                         </span>

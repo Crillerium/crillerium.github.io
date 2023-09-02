@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crillerium Blog ffmpeg将m3u8文件转为mp4</title>
+    <title>Crillerium Blog || ffmpeg将m3u8文件转为mp4</title>
     <meta name="author" content="Crillerium">
     <meta name="description" content="Share Knowledge and Inspiration ">
     <meta name="keywords" content=" ">
@@ -72,6 +72,13 @@
             <span>archives</span>
         </a>
         
+        <a href="/atom.xml">
+            <span>
+                <a-icon type="file" theme="filled" />
+            </span>
+            <span>feed</span>
+        </a>
+        
     </div>
 
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
@@ -110,6 +117,15 @@
                 </div>
             </a>
             
+            <a href="/atom.xml">
+                <div class="item">
+                    <div style="min-width:20px; max-width:50px; width: 10%">
+                        <a-icon type="file" theme="filled" />
+                    </div>
+                    <div style="min-width:100px;max-width: 150%;width: 20%;">feed</div>
+                </div>
+            </a>
+            
         </div>
         <div class="curtain" v-show="menu_show"></div>
     </div>
@@ -143,7 +159,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/python" style=color:#03a9f4>
+                <a href="/tags/python" style=color:#00bcd4>
                     python
                 </a>
             </span>
