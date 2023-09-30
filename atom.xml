@@ -6,7 +6,7 @@
   <link href="https://crillerium.link/atom.xml" rel="self"/>
   
   <link href="https://crillerium.link/"/>
-  <updated>2023-09-01T09:57:53.876Z</updated>
+  <updated>2023-09-30T13:19:20.597Z</updated>
   <id>https://crillerium.link/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git 基本操作</title>
+    <link href="https://crillerium.link/2023/09/30/git-basic-method/"/>
+    <id>https://crillerium.link/2023/09/30/git-basic-method/</id>
+    <published>2023-09-30T13:16:35.000Z</published>
+    <updated>2023-09-30T13:19:20.597Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。</p><p>本章将对有关创建与提交你的项目快照的命令作介绍。</p><span id="more"></span><p>Git 常用的是以下 6 个命令：git clone、git push、git add 、git commit、git checkout、git pull，后面我们会详细介绍。</p><h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><p>workspace：工作区<br>staging area：暂存区&#x2F;缓存区<br>local repository：版本库或本地仓库<br>remote repository：远程仓库</p><h1 id="一个简单的操作步骤"><a href="#一个简单的操作步骤" class="headerlink" title="一个简单的操作步骤"></a>一个简单的操作步骤</h1><pre><code>$ git init    $ git add .    $ git commit  </code></pre><p>说明:<br><code>git init</code> - 初始化仓库。<br><code>git add .</code> - 添加文件到暂存区。<br><code>git commit</code> - 将暂存区内容添加到仓库中。</p><h1 id="创建仓库命令"><a href="#创建仓库命令" class="headerlink" title="创建仓库命令"></a>创建仓库命令</h1><p><code>git init</code> 初始化仓库<br><code>git clone</code> 拷贝一份远程仓库，也就是下载一个项目。<br>提交与修改</p><h1 id="有关创建与提交你的项目的快照的命令："><a href="#有关创建与提交你的项目的快照的命令：" class="headerlink" title="有关创建与提交你的项目的快照的命令："></a>有关创建与提交你的项目的快照的命令：</h1><p>命令说明<br><code>git add</code>添加文件到暂存区<br><code>git status</code>查看仓库当前的状态，显示有变更的文件。<br><code>git diff</code>比较文件的不同，即暂存区和工作区的差异。<br><code>git commit</code>提交暂存区到本地仓库。<br><code>git reset</code>回退版本。<br><code>git rm</code>将文件从暂存区和工作区中删除。<br><code>git mv</code>移动或重命名工作区文件。<br><code>git checkout</code>分支切换。<br><code>git switch</code> （Git 2.23 版本引入）更清晰地切换分支。<br><code>git restore</code> （Git 2.23 版本引入）恢复或撤销文件的更改。</p><h1 id="提交日志"><a href="#提交日志" class="headerlink" title="提交日志"></a>提交日志</h1><p><code>git log</code> 查看历史提交记录<br><code>git blame</code> <file> 以列表形式查看指定文件的历史修改记录</p><h1 id="远程操作"><a href="#远程操作" class="headerlink" title="远程操作"></a>远程操作</h1><p><code>git remote</code>远程仓库操作<br><code>git fetch</code>从远程获取代码库<br><code>git pull</code>下载远程代码并合并<br><code>git push</code>上传远程代码并合并 </p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h1&gt;&lt;p&gt;Git 的工作就是创建和保存你项目的快照及与之后的快照进行对比。&lt;/p&gt;
+&lt;p&gt;本章将对有关创建与提交你的项目快照的命令作介绍。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="git" scheme="https://crillerium.link/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>ffmpeg将m3u8文件转为mp4</title>
