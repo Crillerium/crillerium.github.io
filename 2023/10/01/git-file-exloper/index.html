@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crillerium Blog</title>
+    <title>Crillerium Blog || 将Git用作文件管理器</title>
     <meta name="author" content="Crillerium">
     <meta name="description" content="Share Knowledge and Inspiration ">
     <meta name="keywords" content=" ">
@@ -134,131 +134,112 @@
                 </div>
 
                 <div id="main">
-                    
-<div id="archives">
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2023/10/1" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2023/10/1</div>
-                <a href="/2023/10/01/git-file-exloper/">
-                    <h3>将Git用作文件管理器</h3>
-                </a>
-                <div class="info">
-                    
+                     
+<link rel="stylesheet" href="/css/post-body.css">
+<div class="article">
+    <div>
+        <h1>将Git用作文件管理器 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <a-icon type="calendar" theme="filled" />
+            </span>
+            2023/10/1
+        </span>
 
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <a-icon type="tags" />
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/git" style=color:#ffa2c4>
-                                git
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2023/9/30" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2023/9/30</div>
-                <a href="/2023/09/30/git-basic-method/">
-                    <h3>Git 基本操作</h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <a-icon type="tags" />
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/git" style=color:#00bcd4>
-                                git
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2023/9/1" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2023/9/1</div>
-                <a href="/2023/09/01/ffmpeg-with-python/">
-                    <h3>ffmpeg将m3u8文件转为mp4</h3>
-                </a>
-                <div class="info">
-                    
+        
 
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <a-icon type="tags" />
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/python" style=color:#00bcd4>
-                                python
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
-    
-    <a-timeline>
-        <a-timeline-item timestamp="2023/9/1" placement="top" color="#a5c2f5">
-            <a-card hoverable>
-                <div class="item-time">2023/9/1</div>
-                <a href="/2023/09/01/disable-firewall/">
-                    <h3>Ubuntu系统关闭防火墙</h3>
+        <span class="tags">
+            <span class="icon">
+                <a-icon type="tags" theme="filled" />
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/git" style=color:#ff7d73>
+                    git
                 </a>
-                <div class="info">
-                    
+            </span>
+            
+        </span>
+        
+    </div>
 
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <a-icon type="tags" />
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/linux" style=color:#03a9f4>
-                                linux
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </a-card>
-        </a-timeline-item>
-    </a-timeline>
+    <div class="content" v-pre>
+        <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Git 本身具有强大的文件管理功能。通过灵活运用一些命令，Git 完全可以用作文件管理器用途</p>
+<span id="more"></span>
+
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html">菜鸟教程: Git 教程</a></p>
+<h1 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h1><hr>
+<ol>
+<li>创建分支</li>
+</ol>
+<pre><code class="git">git branch &lt;branch_name&gt;
+</code></pre>
+<ol start="2">
+<li>删除分支</li>
+</ol>
+<pre><code class="git">git branch -d &lt;branch_name&gt;
+</code></pre>
+<ol start="3">
+<li>重命名分支</li>
+</ol>
+<pre><code class="git">git branch -m &lt;old_branch_name&gt; &lt;new_branch_name&gt;
+</code></pre>
+<ol start="4">
+<li>切换到指定分支</li>
+</ol>
+<pre><code class="git">git checkout &lt;branch_name&gt;
+</code></pre>
+<ol start="5">
+<li>添加文件到暂存区</li>
+</ol>
+<pre><code class="git">git add &lt;file_name&gt;
+</code></pre>
+<ol start="6">
+<li>提交修改到当前分支</li>
+</ol>
+<pre><code class="git">git commit -m &#39;commit message&#39;
+</code></pre>
+<h1 id="进阶操作"><a href="#进阶操作" class="headerlink" title="进阶操作"></a>进阶操作</h1><hr>
+<ol>
+<li>列出指定分支中所有文件夹及文件</li>
+</ol>
+<pre><code class="git">git ls-tree -r --name-only &lt;branch_name&gt;
+</code></pre>
+<ol start="2">
+<li>从指定分支中取得某一文件</li>
+</ol>
+<pre><code class="git">git checkout &lt;branch_name&gt; -- &lt;file_name&gt;
+</code></pre>
+<ol start="3">
+<li>重命名文件或文件夹(需提前切换到该分支)</li>
+</ol>
+<pre><code class="git">git mv -v &lt;old_file_name&gt; &lt;new_file_name&gt;
+</code></pre>
+<ol start="4">
+<li>删除文件或文件夹</li>
+</ol>
+<ul>
+<li>删除暂存区或分支上的文件, 同时删除工作区相应文件</li>
+</ul>
+<pre><code class="git">git rm -f file_name
+git commit -m &quot;del file&quot;
+</code></pre>
+<ul>
+<li>删除暂存区或分支上的文件, 但保留工作区相应文件</li>
+</ul>
+<pre><code class="git">git rm -r --cached file_name
+git commit -m &quot;del file&quot;
+</code></pre>
+
+    </div>
+
     
 </div>
-
                      
 <footer id="footer">
     <div class="footer-wrap">
