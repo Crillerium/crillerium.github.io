@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://crillerium.link/friend/index.html</loc>
+    
+    <lastmod>2023-10-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://crillerium.link/2023/10/01/git-file-exloper/</loc>
     
     <lastmod>2023-10-01</lastmod>
