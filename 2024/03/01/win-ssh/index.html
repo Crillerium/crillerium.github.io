@@ -7,21 +7,21 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="正文链接(先把链接放这里，以后再搬运)">
+<meta name="description" content="原文链接 前言在管理Linux服务器的时候，通常是使用ssh客户端连接到服务器进行远程操作，或者想从服务器上操作本机，又或者是本机与服务器双向传送文件。这种情况对于本机使用的是Mac或者Linux桌面系统就很容易实现，但如果本机使用的是windows系统的话就比较麻烦，特别是使用win7系统（win10系统已自带ssh服务打开即可），这时候就急需一种方式让手上的win7系统能够支持ssh服务功能。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Windows7部署OpenSSH服务">
+<meta property="og:title" content="Windows7之SSH，安装OpenSSH实现SSH客户端及服务">
 <meta property="og:url" content="http://example.com/2024/03/01/win-ssh/index.html">
 <meta property="og:site_name" content="Kritil&#39;s">
-<meta property="og:description" content="正文链接(先把链接放这里，以后再搬运)">
+<meta property="og:description" content="原文链接 前言在管理Linux服务器的时候，通常是使用ssh客户端连接到服务器进行远程操作，或者想从服务器上操作本机，又或者是本机与服务器双向传送文件。这种情况对于本机使用的是Mac或者Linux桌面系统就很容易实现，但如果本机使用的是windows系统的话就比较麻烦，特别是使用win7系统（win10系统已自带ssh服务打开即可），这时候就急需一种方式让手上的win7系统能够支持ssh服务功能。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-01T05:20:53.000Z">
-<meta property="article:modified_time" content="2024-03-01T14:56:20.578Z">
+<meta property="article:modified_time" content="2024-03-02T05:21:58.021Z">
 <meta property="article:author" content="Kristil">
 <meta property="article:tag" content="搬运">
 <meta name="twitter:card" content="summary">
 
 
-<title >Windows7部署OpenSSH服务</title>
+<title >Windows7之SSH，安装OpenSSH实现SSH客户端及服务</title>
 
 <!-- Favicon -->
 
@@ -60,7 +60,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"example.com","author":"Kristil","root":"/","typed_text":["Backend Developer","Web Developer"],"theme_version":"2.1.10","theme":{"switch":true,"default":"style-light"},"favicon":{"logo":"/img/favicon.svg","icon16":"/img/favicon.svg","icon32":"/img/favicon.svg","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/failure.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","sticky":"置顶","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"toc":{"post_title":true},"live_time":{"start_time":"","prefix":"博客已萌萌哒运行 undefined 天"},"covers":"/img/block.jpg"};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-01 22:56:20"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-03-02 13:21:58"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.1.10" id="trm-switch-style">
@@ -215,7 +215,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            Windows7部署OpenSSH服务
+                            Windows7之SSH，安装OpenSSH实现SSH客户端及服务
                         </h1>
 
                         
@@ -340,7 +340,34 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jerrygaoling/article/details/115308184">链接</a><br>(先把链接放这里，以后再搬运)</p>
+    <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/jerrygaoling/article/details/115308184">原文链接</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>在管理Linux服务器的时候，通常是使用ssh客户端连接到服务器进行远程操作，或者想从服务器上操作本机，又或者是本机与服务器双向传送文件。这种情况对于本机使用的是Mac或者Linux桌面系统就很容易实现，但如果本机使用的是windows系统的话就比较麻烦，特别是使用win7系统（win10系统已自带ssh服务打开即可），这时候就急需一种方式让手上的win7系统能够支持ssh服务功能。</p>
+<h1 id="实现工具"><a href="#实现工具" class="headerlink" title="实现工具"></a>实现工具</h1><p>在目前最好的解决办法就是给Windows安装一个ssh服务，微软已经支持openssh，所以获取并安装openssh即可满足需求。</p>
+<p>1、获取所需的Openshh文件<br>微软的PowerShell团队已经支持openssh，所以安装文件我们可以在github的powershell团队项目下进行下载<br>下载地址： <a target="_blank" rel="noopener" href="https://github.com/PowerShell/Win32-OpenSSH/releases">https://github.com/PowerShell/Win32-OpenSSH/releases</a><br>根据你自己的系统对应下载</p>
+<p>2、安装OpenSSH<br>这一步非常简单，只用把下载好的压缩文件解压出来即可。<br>首先已经下载好OpenSSH，并且进行解压<br>把OpenSSH整个目录进行复制到 C:\Program Files (其实哪个目录都可以，不过建议安装在这里，免得出问题)</p>
+<p>3、配置参数<br>单击计算机，右键 –&gt; 属性 –&gt; 高级系统设置 –&gt; 环境变量–系统变量，在此框里面找到 Path 进行编辑，windows7系统编辑时候是以文本形式，所以就需要在最后先添加 “； ” 英文分号，再把你安装路径 如 C:\Program Files\OpenSSH-Win64 粘贴进去。windows 10系统添加比较方便，进到Path里面，点击-新建直接粘贴进去！</p>
+<p>4、ssh测试<br>使用cmd命令打开dos命令行或者打开windows的PowerShell，直接输入ssh命令，可以得到命令菜单。</p>
+<p>ssh的使用方法可以见Linux中使用SSH服务远程连接Linux系统，最基本用法就是ssh user@ip默认端口22，其中user是用户名，ip是访问的目的地址。<br>首次连接未知主机会有是否继续的警告，输入yes就可以了，然后输入密码即可。<br>到此： ssh客户端就可以正常使用了，但是想要让本机成为ssh服务被远程访问的话，还需要后续操作。</p>
+<hr>
+
+<p>5、发布ssh服务<br>打开系统CMD界面依次执行一下命令</p>
+<p>1）安装sshd服务<br>powershell.exe -ExecutionPolicy Bypass -File install-sshd.ps1</p>
+<p>2）开放22号端口（如果你在windows关闭了防火墙并配置了入站规则可以不执行如下命令，多执行不影响）<br>netsh advfirewall firewall add rule name&#x3D;sshd dir&#x3D;in action&#x3D;allow protocol&#x3D;TCP localport&#x3D;22</p>
+<p>3）配置开机自启sshd服务<br>sc config sshd start&#x3D; auto</p>
+<p>开启服务<br>net start sshd<br>第一次安装完服务之后还需要手动打开一下服务，后面配置过自启之后就不用管了。</p>
+<p>5）验证一下端口<br>打开cmd，使用netstat -an命令查看一下本机的22端口是否被监听。<br>要是22端口被监听着，恭喜你，ssh服务搞定了。可以通过其他服务器连接下本机。</p>
+<p>6、免密访问<br>ssh出于安全考虑，每次连接都会提示输入密码，要是本机一直都是自己使用的话，也可以生成秘钥，之后就不用每次输入密码了。</p>
+<ol>
+<li><p>生成密钥对命令<br>ssh-keygen -t rsa</p>
+</li>
+<li><p>配置公钥<br>将公钥传到远程主机的~&#x2F;.ssh目录下<br>名字改成authorized_keys</p>
+</li>
+</ol>
+<p>3)修改远程主机sshd_config配置<br>PubkeyAuthentication yes</p>
+<p>完成所有配置之后，重启sshd服务</p>
+<p>此时就可以愉快的免密访问了。</p>
+<p>7、ssh的使用方式<br>写在最后，具体的ssh使用方式详见Linux中使用SSH服务远程连接Linux系统，其中讲解了ssh的基础原理和详细的使用方法。</p>
+<p> 返回目录</p>
 
 </article>
     
